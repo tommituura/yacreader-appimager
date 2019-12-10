@@ -3,3 +3,4 @@
 .vscode
 factcache
 .vagrant
+ssh.yml

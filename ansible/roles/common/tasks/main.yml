@@ -1,0 +1,15 @@
+---
+- name: update the software
+  become: yes
+  yum:
+    update_cache: yes
+
+- name: install stuff
+  become: yes
+  yum:
+    name: "{{ item }}"
+    state: present
+  loop:
+    - git
+    - vim
+    - "@development tools"

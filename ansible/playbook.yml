@@ -1,0 +1,8 @@
+---
+- hosts: builder
+
+  roles:
+    - common
+
+  vars_files:
+    - vars/ssh.yml
