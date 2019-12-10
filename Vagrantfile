@@ -18,10 +18,10 @@ Vagrant.configure("2") do |config|
   config.ssh.forward_agent = true
 
   # Synced folders
-  config.vm.synced_folder ".", "/vagrant", 
-    enabled: true,
-    nfs: true,
-    linux__nfs_options: ['rw','no_root_squash']
+  # config.vm.synced_folder ".", "/vagrant", 
+  #   enabled: true,
+  #   nfs: true,
+  #   linux__nfs_options: ['rw','no_root_squash']
 
   # Start by updating the packages.
   config.vm.provision "shell", inline: <<-SHELL
