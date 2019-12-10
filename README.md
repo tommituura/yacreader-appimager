@@ -19,3 +19,10 @@ Likely, a recentish (upstream) version of:
     * You'll probably want to install kvm/libvirt stuff onto your linux. `virt-manager` should do the trick for ubuntu 18.04
     * Why not virtualbox? Well, performance and more importantly, [this](https://github.com/chocolatey-community/chocolatey-coreteampackages/issues/1145).
 * ansible (I use 2.9.2 as of this writing)
+
+## Usage:
+
+1. `$ vagrant up` (You'll have to wait a bit for the package manager to update)
+2. `$ ansible-playbook -i ansible/inventory.ini ansible/playbook.yml` (accept the host key for the first time you run it)
+
+If you destroy the vm and create it again, it'll shout nasty things about changed host key. Don't panic, read the message carefully and then clean the old key away from `~/.ssh/known_hosts` as instructed in the message. 
